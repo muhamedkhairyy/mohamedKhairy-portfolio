@@ -50,7 +50,7 @@ export function Contact() {
 
                     <div className="flex gap-4">
                         <a
-                            href="https://github.com"
+                            href=""
                             target="_blank"
                             rel="noreferrer"
                             className="p-4 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:border-primary hover:bg-zinc-800 transition-colors"
@@ -58,7 +58,7 @@ export function Contact() {
                             <Github className="w-6 h-6" />
                         </a>
                         <a
-                            href="https://linkedin.com"
+                            href="https://linkedin.com/in/muhamed-khairy-b29797203"
                             target="_blank"
                             rel="noreferrer"
                             className="p-4 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:border-primary hover:bg-zinc-800 transition-colors"

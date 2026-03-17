@@ -44,7 +44,7 @@ export function Projects() {
                 <AnimatePresence>
                     {filteredProjects.map((project) => (
                         <motion.div
-                            key={project.slug}
+                            key={project.title}
                             layout
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}

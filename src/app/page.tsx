@@ -8,12 +8,12 @@ import { Contact } from "@/components/sections/contact";
 export default function Home() {
   return (
     <div className="w-full overflow-hidden">
-      {/* <Hero /> 
+      <Hero />
       <About />
-      <Skills />*/}
+      <Skills />
       <Projects />
-      {/*<Experience />
-      <Contact /> */}
+      <Experience />
+      <Contact />
     </div>
   );
 }
