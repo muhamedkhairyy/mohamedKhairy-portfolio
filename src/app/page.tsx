@@ -9,11 +9,11 @@ export default function Home() {
   return (
     <div className="w-full overflow-hidden">
       <Hero />
-      <About />
+      {/* <About />
       <Skills />
       <Projects />
       <Experience />
-      <Contact />
+      <Contact /> */}
     </div>
   );
 }

@@ -9,9 +9,9 @@ export const Button = React.forwardRef<HTMLButtonElement, React.ComponentProps<"
                 className={cn(
                     "inline-flex items-center justify-center rounded-full font-semibold transition-all focus:outline-none disabled:opacity-50 disabled:pointer-events-none",
                     {
-                        "bg-primary text-white hover:bg-primary-dark hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/25": variant === "default",
-                        "border-2 border-white text-white bg-transparent hover:bg-white hover:text-black": variant === "outline",
-                        "bg-transparent text-zinc-400 hover:bg-zinc-900 hover:text-white": variant === "ghost",
+                        "bg-primary text-white hover:bg-primary-600 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/25": variant === "default",
+                        "border-2 border-border text-foreground bg-transparent hover:bg-surface hover:border-border-hover": variant === "outline",
+                        "bg-transparent text-text-muted hover:bg-surface hover:text-foreground": variant === "ghost",
                     },
                     {
                         "h-12 px-8 text-lg": size === "default",

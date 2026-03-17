@@ -1,60 +1,69 @@
 @import "tailwindcss";
 
-@theme {
-  --color-primary: #f97316;
-  --color-primary-dark: #ea580c;
-  --color-primary-light: #fb923c;
-  --color-background: #000000;
-  --color-foreground: #ffffff;
-  --color-zinc-900: #18181b;
-  --color-zinc-800: #27272a;
-  --color-zinc-950: #09090b;
-
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
-}
+@import "./theme.css";
 
 @layer base {
-  * {
-    border-color: var(--color-zinc-800);
+  *, ::before, ::after {
+    border-color: var(--color-border);
   }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     line-height: 1.6;
     overflow-x: hidden;
     font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  html {
-    scroll-behavior: smooth;
-    color-scheme: dark;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
   }
 }
 
 @layer utilities {
   .text-gradient {
-    background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary-dark));
+    background: linear-gradient(135deg, var(--color-primary-300), var(--color-primary-600));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .glow-orange {
-    box-shadow: 0 0 40px -10px rgba(249, 115, 22, 0.4);
+    box-shadow: var(--shadow-glow);
   }
 
-  /* Custom Scrollbar */
+  .glow-orange:hover {
+    box-shadow: var(--shadow-glow-hover);
+  }
+
+  .surface-glass {
+    background: rgba(17, 17, 17, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--color-border);
+  }
+
   ::-webkit-scrollbar {
     width: 8px;
+    height: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: var(--color-zinc-950);
+    background: var(--color-background);
   }
   ::-webkit-scrollbar-thumb {
-    background: var(--color-zinc-800);
+    background: var(--color-border);
     border-radius: 4px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-primary);
+    background: var(--color-border-hover);
   }
 }
