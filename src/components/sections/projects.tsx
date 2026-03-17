@@ -8,7 +8,7 @@ import { projectsData } from "@/data/projects";
 import { Section } from "../layout/section";
 import { Badge } from "../ui/badge";
 
-const categories = ["All", "React", "Next.js", "Fullstack", "Library"];
+const categories = ["All", "E-commerce", "Dashboards", "Landing Pages", "SaaS",];
 
 export function Projects() {
     const [activeCategory, setActiveCategory] = useState("All");
@@ -19,7 +19,7 @@ export function Projects() {
 
     return (
         <Section id="projects" title="Featured Projects" subtitle="A selection of my recent work in building complex web applications.">
-            {/* Filters */}
+
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -31,8 +31,8 @@ export function Projects() {
                         key={category}
                         onClick={() => setActiveCategory(category)}
                         className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeCategory === category
-                                ? "bg-primary text-white shadow-md shadow-primary/20"
-                                : "bg-zinc-900 text-zinc-400 hover:bg-zinc-800"
+                            ? "bg-primary text-white shadow-md shadow-primary/20"
+                            : "bg-zinc-900 text-zinc-400 hover:bg-zinc-800"
                             }`}
                     >
                         {category}
@@ -40,7 +40,6 @@ export function Projects() {
                 ))}
             </motion.div>
 
-            {/* Project Grid */}
             <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <AnimatePresence>
                     {filteredProjects.map((project) => (
@@ -53,7 +52,6 @@ export function Projects() {
                             transition={{ duration: 0.3 }}
                             className="group relative bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 flex flex-col"
                         >
-                            {/* Image Preview */}
                             <div className="relative h-56 overflow-hidden">
                                 <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors z-10" />
                                 <img
@@ -61,7 +59,6 @@ export function Projects() {
                                     alt={project.title}
                                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                                 />
-                                {/* Status Label */}
                                 <div className="absolute top-4 right-4 z-20">
                                     {!project.liveUrl ? (
                                         <span className="px-3 py-1 bg-yellow-500/90 text-white text-xs font-bold rounded-full backdrop-blur-md shadow-sm">
@@ -75,7 +72,6 @@ export function Projects() {
                                 </div>
                             </div>
 
-                            {/* Content */}
                             <div className="p-6 flex flex-col flex-grow">
                                 <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-primary transition-colors">
                                     {project.title}
@@ -92,21 +88,19 @@ export function Projects() {
                                     ))}
                                 </div>
 
-                                <div className="flex items-center justify-between pt-4 border-t border-zinc-800">
+                                {project.githubUrl || project.liveUrl && <div className="flex items-center justify-between pt-4 border-t border-zinc-800">
                                     <div className="flex gap-4">
-                                        <a href={project.githubUrl} target="_blank" rel="noreferrer" className="text-zinc-500 hover:text-white transition-colors">
+                                        {project.githubUrl && <a href={project.githubUrl} target="_blank" rel="noreferrer" className="text-zinc-500 hover:text-white transition-colors">
                                             <Github className="w-5 h-5" />
-                                        </a>
-                                        {project.liveUrl && (
-                                            <a href={project.liveUrl} target="_blank" rel="noreferrer" className="text-zinc-500 hover:text-primary transition-colors">
-                                                <ExternalLink className="w-5 h-5" />
-                                            </a>
-                                        )}
+                                        </a>}
+                                        {project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noreferrer" className="text-zinc-500 hover:text-primary transition-colors">
+                                            <ExternalLink className="w-5 h-5" />
+                                        </a>}
                                     </div>
-                                    <Link href={`/projects/${project.slug}`} className="text-sm font-semibold text-primary hover:text-primary-dark flex items-center gap-1 group-hover:gap-2 transition-all">
+                                    {project.slug && <Link href={`/projects/${project.slug}`} className="text-sm font-semibold text-primary hover:text-primary-dark flex items-center gap-1 group-hover:gap-2 transition-all">
                                         View Details <MonitorPlay className="w-4 h-4" />
-                                    </Link>
-                                </div>
+                                    </Link>}
+                                </div>}
                             </div>
                         </motion.div>
                     ))}

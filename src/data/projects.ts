@@ -2,16 +2,24 @@ import { Project } from "../types/project";
 
 export const projectsData: Project[] = [
   {
-    slug: "e-commerce-dashboard",
-    title: "E-Commerce Analytics Dashboard",
+    slug: "",
+    title: "E-Commerce Website",
     description:
       "A high-performance analytics dashboard for digital storefronts with real-time data visualization.",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-    techStack: ["React", "TypeScript", "Tailwind CSS", "Recharts"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://demo.example.com",
-    category: "React",
+    image: "/homzmart.png",
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "MUI",
+      "Redux",
+      "Sass",
+      "Storybook",
+      "SEO Optimization",
+      "Design System",
+    ],
+    githubUrl: "",
+    liveUrl: "https://homzmart.com",
+    category: "E-commerce",
     details: {
       problem:
         "Store owners lacked real-time visibility into their sales metrics, leading to delayed decision making.",
@@ -27,15 +35,23 @@ export const projectsData: Project[] = [
     },
   },
   {
-    slug: "fintech-landing",
-    title: "FinTech Marketing Platform",
+    slug: "",
+    title: "Seller Center Dashboard",
     description:
       "A beautiful, SEO-optimized marketing site for a modern fintech startup with smooth scroll animations.",
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1950&auto=format&fit=crop",
-    techStack: ["Next.js", "TypeScript", "Framer Motion", "SCSS"],
-    githubUrl: "https://github.com",
-    category: "Next.js",
+    image: "/seller-center.png",
+    techStack: [
+      "react",
+      "javascript",
+      "Redux",
+      "React Router",
+      "Yup",
+      "react-hook-form",
+      "Sass",
+      "Design System",
+    ],
+    githubUrl: "",
+    category: "Dashboards",
     details: {
       problem:
         "The client needed a highly performant and accessible landing page to capture investor and user interest.",
@@ -51,16 +67,89 @@ export const projectsData: Project[] = [
     },
   },
   {
-    slug: "internal-ui-library",
-    title: "Enterprise UI Component Library",
+    slug: "",
+    title: "OMS Dashboard",
     description:
       "A reusable, accessible component library built for a suite of internal corporate tools.",
-    image:
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop",
-    techStack: ["React", "TypeScript", "Tailwind CSS", "Radix UI"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://storybook.example.com",
-    category: "React",
+    image: "/OMS.png",
+    techStack: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Redux",
+      "React Router",
+      "Yup",
+      "react-hook-form",
+      "Sass",
+      "Design System",
+    ],
+    githubUrl: "",
+    liveUrl: "",
+    category: "Dashboards",
+    details: {
+      problem:
+        "Inconsistent UI patterns and duplicated effort across multiple internal engineering teams.",
+      solution:
+        "Engineered a headless-UI based library customized with Tailwind for unified branding.",
+      architecture:
+        "Built with Rollup. Components strictly follow WAI-ARIA guidelines.",
+      challenges:
+        "Managing complicated nested states for multi-select dropdowns and data tables.",
+      screenshots: [
+        "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070&auto=format&fit=crop",
+      ],
+    },
+  },
+  {
+    slug: "",
+    title: "HomzDesign Chat Sass",
+    description:
+      "A reusable, accessible component library built for a suite of internal corporate tools.",
+    image: "/Homzdesgin.png",
+    techStack: [
+      "next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Redux",
+      "Sass",
+      "SEO Optimization",
+      "Design System",
+    ],
+    githubUrl: "",
+    liveUrl: "https://homzdesign.homzmart.com/chat",
+    category: "SaaS",
+    details: {
+      problem:
+        "Inconsistent UI patterns and duplicated effort across multiple internal engineering teams.",
+      solution:
+        "Engineered a headless-UI based library customized with Tailwind for unified branding.",
+      architecture:
+        "Built with Rollup. Components strictly follow WAI-ARIA guidelines.",
+      challenges:
+        "Managing complicated nested states for multi-select dropdowns and data tables.",
+      screenshots: [
+        "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070&auto=format&fit=crop",
+      ],
+    },
+  },
+  {
+    slug: "",
+    title: "HomzDesign Landing Page",
+    description:
+      "A reusable, accessible component library built for a suite of internal corporate tools.",
+    image: "/HomzDesgin-landing.png",
+    techStack: [
+      "next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Redux",
+      "Sass",
+      "SEO Optimization",
+      "Design System",
+    ],
+    githubUrl: "",
+    liveUrl: "https://homzdesign.homzmart.com",
+    category: "Landing Pages",
     details: {
       problem:
         "Inconsistent UI patterns and duplicated effort across multiple internal engineering teams.",

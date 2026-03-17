@@ -8,7 +8,7 @@ export function Footer() {
                     Built with ❤️ using Next.js, React, TypeScript, and Tailwind CSS.
                 </p>
                 <p className="text-zinc-600 mt-2 text-sm text-center">
-                    © {new Date().getFullYear()} Mohamed Khairy. All rights reserved.
+                    © 2025 Mohamed Khairy. All rights reserved.
                 </p>
             </Container>
         </footer>

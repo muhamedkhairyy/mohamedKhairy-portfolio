@@ -14,6 +14,6 @@ export interface Project {
   techStack: string[];
   githubUrl: string;
   liveUrl?: string;
-  category: "Frontend" | "Fullstack" | "Library" | "React" | "Next.js";
+  category: "E-commerce" | "Dashboards" | "Landing Pages" | "SaaS";
   details: ProjectDetails;
 }
