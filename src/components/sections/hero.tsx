@@ -54,7 +54,7 @@ export function Hero() {
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.4 }}
+                            transition={{ duration: 0.5, delay: 0.8 }}
                             className="text-xl sm:text-2xl font-medium text-text-dim"
                         >
                             Frontend Engineer | React • Next.js • TypeScript
